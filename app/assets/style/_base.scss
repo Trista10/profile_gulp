@@ -1,0 +1,75 @@
+// 共用
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+
+h2 {
+    font-size: $h2-font-size;
+    font-weight: $font-bold;
+    color: $color-primary-dark;
+}
+h3 {
+    font-family: $font-family-tw;
+    font-size: $h3-font-size;
+    font-weight: $font-bold;
+    line-height: 67px;
+    color: $color-primary-dark;
+    text-align: center;
+}
+h4 {
+    font-family: $font-family-tw;
+    font-size: $h4-font-size;
+    font-weight: $font-bold;
+    line-height: 33px;
+    color: $color-primary-dark;
+}
+h5 {
+    font-size: $h5-font-size;
+}
+h6 {
+    font-size: $h6-font-size;
+}
+a {
+    text-decoration: none;
+    color: $color-white;
+    display: block;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.pl-0 {
+    padding-left: 0;
+}
+
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    @include pad {
+        max-width:690px;
+        padding-left: 39px;
+        padding-right: 39px;
+    }
+    @include mobile {
+        max-width:345px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.title {
+    margin-bottom: 60px;
+    @include pad { 
+        font-size: $font-size32;
+        line-height: 45px;
+        margin-bottom: 32px;
+    }
+    @include mobile {
+        font-size: $font-size20;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+}

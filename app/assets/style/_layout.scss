@@ -1,0 +1,340 @@
+// font
+@font-face {
+    font-family: "Noto Sans";
+    src: url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap);
+    /* 沒有指定萬國碼區間，預設涵蓋所有的範圍 */
+}
+@font-face {
+    font-family: "Noto Sans";
+    src: url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap);
+    unicode-range: U+00-024F
+}
+body {
+    font-family:"Noto Sans","Roboto", serif;
+}
+
+
+
+
+// header
+nav {
+    background: $color-primary;
+    @include mobile {
+        padding: 0;
+    }
+}
+.nav {
+    padding-left: 88px;
+    padding-right: 58px;
+
+    @include pad {
+        padding-left: 39px;
+        padding-right: 19px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+.logo {
+    @include mobile {
+        margin: 10px 0px;
+        width: 48px;
+        height: 29px;
+    }
+}
+.menu {
+    @include mobile{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+.menu-item {
+    @include mobile{
+        width: 50%;
+        border: 1px solid $color-white;
+        box-sizing: border-box;
+    }
+}
+.menu-item a {
+    font-family: $font-family-tw;
+    font-weight: $font-Regular;
+    font-size: $h6-font-size;
+    padding: 40px 32px;
+    line-height: 28px;
+    &:hover {
+        background: $color-primary-dark;
+    }
+
+    @include pad{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include mobile{
+        padding: 8px 0;
+    }
+}
+
+
+
+// footer
+footer {
+    background: $color-primary;
+}
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-white;
+    padding-top: 44px;
+    margin-bottom: 24px;
+}
+    @include pad{
+        .footer-info {
+            padding-top: 40px;
+        }
+    }
+    @include mobile{
+        .footer-info {
+            padding-top: 24px;
+        }
+    }
+
+.footer-info-menu {
+    display: flex;
+    font-family: $font-family-tw;
+    font-size: $font-size16;
+    line-height: 22px;
+    margin-bottom: 32px;
+    li {
+        padding-right: 48px;
+    }
+    a {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        &:hover {
+            background-color: $color-primary-dark;
+        }
+    }
+}
+
+    @include pad {
+        .footer-info-menu {
+            margin-bottom: 32px;
+            li {
+                padding-right: 40px;
+            }
+        }
+    }
+    @include mobile{
+        .footer-info-menu {
+            display: none;
+        }
+    }
+
+.footer-info-contact {
+    color:$color-white;
+    margin-bottom: 20px;
+}
+@include pad{
+    .footer-info-contact {
+        margin-bottom: 24px;
+    }
+}
+
+.footer-info-contact-phone {
+    font-family: $font-family-en;
+    font-size: $font-size36;
+    line-height: 48px;
+    margin-bottom: 19px;
+    img {
+        width: 44px;
+        height: 44px;
+        padding-right: 17px;
+    }
+}
+    @include pad{
+        .footer-info-contact-phone {
+            margin-bottom: 8px;
+            font-size: $h6-font-size;
+            line-height: 26px;
+            img {
+                width: 24px;
+                height: 24px;
+                padding-right: 8px;
+            }
+        }
+    }
+    @include mobile{
+        .footer-info-contact-phone {
+            font-size: $font-size16;
+            line-height: 20px;
+            margin-bottom: 8px;
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+.footer-info-contact-mail {
+    img {
+        width: 48px;
+        height: 48px;
+        padding-right: 17px;
+    }
+    a {
+        display: inline-block;
+        font-family: $font-family-en;
+        font-size: $font-size36;
+        line-height: 48px;
+    }
+}
+    @include pad{
+        .footer-info-contact-mail {
+            img {
+                width: 24px;
+                height: 24px;
+                padding-right: 8px;
+            }
+            a {
+                font-size: $h6-font-size;
+                line-height: 26px;
+            }
+        }
+    }
+    @include mobile{
+        .footer-info-contact-mail {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+            a {
+                font-size: $font-size16;
+                line-height: 21px;
+            }
+        }
+    }
+
+.footer-info-social {
+    display: flex;
+    li {
+        padding-left: 32px;
+    }
+    img {
+        width: 48px;
+        height: 48px;
+    }
+    .pl-0 {
+        padding-left: 0;
+    }
+}
+    @include pad{
+        .footer-info-social {
+            li {
+                padding-left: 24px;
+            }
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    padding-bottom: 28px;
+}
+@include mobile {
+    .footer-copyright {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding-bottom: 25px;
+    }
+}
+
+.footer-logo {
+    width: 10%;
+}
+    @include pad {
+        .footer-logo {
+            display: none;
+        }
+    }
+    @include mobile {
+        .footer-logo {
+            display: block;
+            width: 46px;
+        }
+    }
+
+.footer-list {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+    @include pad{
+        .footer-list {
+            width: 100%;
+        }
+    }
+    @include mobile{
+        .footer-list {
+            flex-direction: column;
+        }
+    }
+
+.footer-list-text {
+    font-family: $font-family-en;
+    font-size: $font-size16;
+    line-height: 24px;
+    color: $color-white;
+}
+    @include mobile{
+        .footer-list-text {
+            font-size: $font-size14;
+            line-height: 19px;
+            margin-bottom: 8px;
+        }
+    }
+
+
+.footer-list-link {
+    display: flex;
+    font-family: $font-family-tw;
+    font-size: $font-size14;
+    line-height: 20px;
+    li {
+        margin-left: 62px;
+    }
+    a {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        &:hover {
+            background-color: $color-primary-dark;
+        }
+    }
+}
+@include pad{
+    .footer-list-link {
+        li {
+            margin-left: 24px;
+        }
+    }
+}
+@include mobile{
+    .footer-list-link {
+        flex-direction: column;
+        li {
+            margin-left: 0;
+            margin-bottom: 8px;
+        }
+        a:hover {
+            display: inline-block;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title><%- title %></title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<!-- XD_pc連結: https://xd.adobe.com/view/8b7a73f4-31ab-4b10-a946-00fc87dfd96e-de29/screen/9030f53b-bb49-44c3-8d71-9901ad0d5206/specs/ -->
+<!-- XD_table連結: https://xd.adobe.com/view/8b7a73f4-31ab-4b10-a946-00fc87dfd96e-de29/screen/e8d37f71-3d15-4790-8617-90bd50d8153b/specs/-->
+<!-- XD_m連結: https://xd.adobe.com/view/8b7a73f4-31ab-4b10-a946-00fc87dfd96e-de29/screen/8f84881c-2de8-40d3-98eb-0fb02ab30b80/specs/ -->
+<!-- Week圖片: https://github.com/hexschool/webLayoutTraining1st/tree/master/week3 
+    https://hexschool.github.io/webLayoutTraining1st/week3/xxx.png
+    https://hexschool.github.io/webLayoutTraining1st/week3/xxx.svg
+-->
+
+<body>
+    <nav>
+        <div class="nav d-flex justify-content-between align-items-center">
+            <h1 class="logo"><a href="index.html"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/logo.png" alt="logo"></a></h1>
+            <ul class="menu d-flex text-center">
+                <li class="menu-item"><a href="#">系列鏡框</a></li>
+                <li class="menu-item"><a href="#">門市據點</a></li>
+                <li class="menu-item"><a href="#">部落格</a></li>
+                <li class="menu-item"><a href="#">常見問題</a></li>
+            </ul>
+        </div>
+    </nav>
+	
+    <main>
+        <%- contents %>
+    </main>
+
+	<footer>
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-info-list">
+                    <ul class="footer-info-menu">
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">系列鏡框</a></li>
+                        <li><a href="#">門市據點</a></li>
+                        <li><a href="#">部落格</a></li>
+                        <li><a href="#">常見問題</a></li>
+                    </ul>
+                    <ul class="footer-info-contact">
+                        <li class="footer-info-contact-phone"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-phone.svg" alt="phone">0800-000-000</li>
+                        <li class="footer-info-contact-mail"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-mail.svg" alt="email"><a href="mailto:glasses@business.com">glasses@business.com</a></li>
+                    </ul>
+                </div>
+                <ul class="footer-info-social">
+                    <li class="pl-0"><a href="#"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-fb.svg" alt="FB"></a></li>
+                    <li><a href="#"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-ig.svg" alt="IG"></a></li>
+                    <li><a href="#"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-line.svg" alt="LINE"></a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+                <div class="footer-logo">
+                    <a href="#"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/logo.png" alt="logo"></a>
+                </div>
+                <div class="footer-list">
+                    <p class="footer-list-text">Copyright © 2020 Glasses.All rights reserved.</p>
+                    <ul class="footer-list-link">
+                        <li><a href="#">隱私權政策</a></li>
+                        <li><a href="#">服務條款</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+	<script src="./assets/js/vendors.js"></script>
+	<script src="./assets/js/all.js"></script>
+</body>
+
+</html>

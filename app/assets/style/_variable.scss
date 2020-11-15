@@ -1,0 +1,63 @@
+// COLOR
+$color-primary: #AA0601;
+$color-primary-dark: #650300;
+$color-primary-light: #FBF2F2;
+$color-secondary: #111619;
+$color-white: #fff;
+
+
+// 文字
+$font-size-base: 1rem; //16px
+$h2-font-size: $font-size-base * 4; //64px
+$h3-font-size: $font-size-base * 3; //48px
+$h4-font-size: $font-size-base * 1.75; //28px
+$h5-font-size: $font-size-base * 1.5; //24px
+$h6-font-size: $font-size-base * 1.25; //20px
+
+
+$font-size14: 14px;
+$font-size16: 16px;
+$font-size20: 20px;
+$font-size24: 24px;
+$font-size28: 28px;
+$font-size32: 32px;
+$font-size36: 36px;
+$font-size48: 48px;
+$font-size64: 64px;
+
+$font-Regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+$font-black: 900;
+
+$font-weight400:400;
+$font-weight500:500;
+$font-weight700:700;
+$font-weight900:900;
+
+$font-family-tw: 'Noto Sans', sans-serif;
+$font-family-en: 'Roboto', sans-serif;
+
+// NOTO:
+// Regular400
+// Bold700
+// Bold-italic700
+
+
+// ROBOTO:
+// Regular400
+// Regular-italic400
+// Medium500
+// Bold700
+// Black900
+
+@mixin pad{
+    @media(max-width:768px){
+        @content;
+    }
+}
+@mixin mobile{
+    @media(max-width:375px){
+        @content;
+    }
+}
