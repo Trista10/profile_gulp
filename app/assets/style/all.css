@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -53,20 +52,15 @@ table {
   border-spacing: 0;
 }
 
-*, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 h2 {
-  font-size: 4rem;
+  font-size: 64px;
   font-weight: 700;
   color: #650300;
 }
 
 h3 {
   font-family: "Noto Sans", sans-serif;
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 700;
   line-height: 67px;
   color: #650300;
@@ -75,18 +69,10 @@ h3 {
 
 h4 {
   font-family: "Noto Sans", sans-serif;
-  font-size: 1.75rem;
+  font-size: 24px;
   font-weight: 700;
   line-height: 33px;
   color: #650300;
-}
-
-h5 {
-  font-size: 1.5rem;
-}
-
-h6 {
-  font-size: 1.25rem;
 }
 
 a {
@@ -99,10 +85,6 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-}
-
-.pl-0 {
-  padding-left: 0;
 }
 
 .container {
@@ -126,6 +108,10 @@ img {
   }
 }
 
+.pl-0 {
+  padding-left: 0;
+}
+
 .title {
   margin-bottom: 60px;
 }
@@ -146,75 +132,22 @@ img {
   }
 }
 
-.d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.justify-content-center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.justify-content-between {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.align-items-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.flex-column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.flex-wrap {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.text-center {
-  text-align: center;
-}
-
-@font-face {
-  font-family: "Noto Sans";
-  src: url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap);
-  /* 沒有指定萬國碼區間，預設涵蓋所有的範圍 */
-}
-
-@font-face {
-  font-family: "Noto Sans";
-  src: url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap);
-  unicode-range: U+00-024F;
-}
-
-body {
-  font-family: "Noto Sans","Roboto", serif;
-}
-
-nav {
+header {
   background: #AA0601;
 }
 
-@media (max-width: 375px) {
-  nav {
-    padding: 0;
-  }
-}
-
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 88px;
-  padding-right: 58px;
+  padding-right: 56px;
 }
 
 @media (max-width: 768px) {
@@ -225,6 +158,9 @@ nav {
 }
 
 @media (max-width: 375px) {
+  header {
+    padding: 0;
+  }
   .nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -242,27 +178,25 @@ nav {
   }
 }
 
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (max-width: 375px) {
   .menu {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
-  }
-}
-
-@media (max-width: 375px) {
-  .menu-item {
-    width: 50%;
-    border: 1px solid #fff;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    text-align: center;
   }
 }
 
 .menu-item a {
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 20px;
   padding: 40px 32px;
   line-height: 28px;
 }
@@ -279,6 +213,12 @@ nav {
 }
 
 @media (max-width: 375px) {
+  .menu-item {
+    width: 50%;
+    border: 1px solid #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
   .menu-item a {
     padding: 8px 0;
   }
@@ -296,7 +236,7 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 1px solid #fff;
-  padding-top: 44px;
+  padding-top: 48px;
   margin-bottom: 24px;
 }
 
@@ -319,20 +259,15 @@ footer {
   font-family: "Noto Sans", sans-serif;
   font-size: 16px;
   line-height: 22px;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 .footer-info-menu li {
   padding-right: 48px;
 }
 
-.footer-info-menu a {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
 .footer-info-menu a:hover {
-  background-color: #650300;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -377,7 +312,7 @@ footer {
 @media (max-width: 768px) {
   .footer-info-contact-phone {
     margin-bottom: 8px;
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 26px;
   }
   .footer-info-contact-phone img {
@@ -419,7 +354,7 @@ footer {
     padding-right: 8px;
   }
   .footer-info-contact-mail a {
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 26px;
   }
 }
@@ -557,15 +492,6 @@ footer {
   margin-left: 62px;
 }
 
-.footer-list-link a {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.footer-list-link a:hover {
-  background-color: #650300;
-}
-
 @media (max-width: 768px) {
   .footer-list-link li {
     margin-left: 24px;
@@ -598,9 +524,6 @@ footer {
   .service-content,
   .classify-content {
     padding-top: 40px;
-  }
-  .classify-content {
-    padding-bottom: 40px;
   }
 }
 
@@ -760,7 +683,7 @@ footer {
   margin-bottom: 4px;
 }
 
-.service-item li P {
+.service-item li span {
   line-height: 24px;
   text-align: left;
 }
@@ -803,15 +726,11 @@ footer {
   margin-bottom: 32px;
 }
 
-.classify-card:nth-child(even) {
+.classify-card:nth-child(2n-1) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-}
-
-.classify-card:nth-child(3) {
-  margin-bottom: 0;
 }
 
 .classify-subTitle {
@@ -822,7 +741,6 @@ footer {
   line-height: 63px;
   text-transform: uppercase;
   margin-left: 30px;
-  margin-right: 30px;
 }
 
 .classify-subTitle img {
@@ -832,44 +750,19 @@ footer {
 
 .classify-img-optical {
   background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-1.png) center center no-repeat;
-  background-size: cover;
   width: 635px;
   height: 320px;
 }
 
 .classify-img-sunglasses {
   background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-2.png) center center no-repeat;
-  background-size: cover;
   width: 635px;
   height: 320px;
 }
 
 .classify-img-functional {
   background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-3.png) center center no-repeat;
-  background-size: cover;
   width: 635px;
   height: 320px;
-}
-
-@media (max-width: 768px) {
-  .classify-card:nth-child(even) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .classify-subTitle {
-    font-size: 28px;
-    line-height: 37px;
-  }
-  .classify-subTitle img {
-    height: 32px;
-  }
-  .classify-img-optical,
-  .classify-img-sunglasses,
-  .classify-img-functional {
-    width: 390px;
-    height: 168px;
-  }
 }
 /*# sourceMappingURL=all.css.map */
