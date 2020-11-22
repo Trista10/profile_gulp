@@ -3,24 +3,16 @@
 .classify-content {
     padding-top: 64px;
     padding-bottom: 80px;
-}
-@include pad{
-    .service-content,
-    .classify-content {
+
+    @include pad{
         padding-top: 40px;
     }
-    .classify-content {
-        padding-bottom: 40px;
-    }
-}
-@include mobile{
-    .service-content,
-    .classify-content {
+
+    @include mobile {
         padding-top: 32px;
         padding-bottom: 12px;
     }
 }
-
 
 
 // banner
@@ -28,9 +20,7 @@
     background: url(https://hexschool.github.io/webLayoutTraining1st/week3/banner.png) center center;
     background-size: cover;
     height: 840px;
-}
-@include mobile{
-    .banner {
+    @include mobile {
         background: url(https://hexschool.github.io/webLayoutTraining1st/week3/banner-sm.png) center center;
         background-size: cover;
         height: 394px;
@@ -38,191 +28,209 @@
 }
 
 .banner-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: 840px;
-}
-    @include mobile{
-        .banner-content {
-            height: 394px;
-        }
+    
+    @include mobile {
+        height: 394px;
     }
-.banner .title {
-    font-family: $font-family-tw;
-    font-weight: $font-weight700;
-    line-height: 90px;
-    text-align: right;
-}
-.banner .title .title-small {
-    font-size: $font-size36;
-    line-height: 50px;
-}
-    @include pad{
-        .banner .title {
-            font-size: $font-size48;
+
+    .title {
+        font-weight: $font-bold;
+        line-height: 90px;
+        
+        @include pad {
+            font-size: $h3-font-size;
             line-height: 67px;
         }
-        .banner .title .title-small {
-            font-size: $font-size20;
-            line-height: 28px;
-        }
-    }
-    @include mobile{
-        .banner .title {
-            font-size: $font-size32;
+
+        @include mobile {
+            font-size: $font-size-base * 2;
             line-height: 45px;
         }
-        .banner .title .title-small {
-            font-size: $font-size16;
+    }
+
+    .title-small {
+        font-size: $font-size-base * 2.25;
+        line-height: 50px;
+        @include pad {
+            font-size: $h6-font-size;
+            line-height: 28px;
+        }
+        @include mobile {
+            font-size: $font-size-base;
             line-height: 22px;
         }
     }
+}
 
 // service
 .service {
     background: $color-primary-light;
 }
-@include mobile {
-    .service-content .title {
-        font-size: $font-size24;
-        line-height: 33px;
-        margin-bottom: 20px;
+
+.service-content {
+    .title {
+        @include mobile {
+            font-size: $font-size24;
+            line-height: 33px;
+            margin-bottom: 20px;
+        }
     }
 }
 .service-item {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-@include pad{
-    .service-item li:nth-of-type(1) {
-        order: 3;
-    }
-    .service-item li:nth-of-type(2) {
-        order: 1;
-    }
-    .service-item li:nth-of-type(3) {
-        order: 2;
-    }
-    .service-item li:nth-of-type(4) {
-        order: 4;
-    }
-}
-@include mobile{
-    .service-item {
+    @include mobile {
         justify-content: center;
     }
 }
-
 .service-item li {
     width: calc(100%/4 - 30px);
     padding: 0 16px;
     box-sizing: border-box;
-    .service-img {
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+    @include pad {
+        width: calc(100%/2 - 30px);
         margin-bottom: 40px;
     }
-    .service-subTitle {
-        text-align: center;
-        margin-bottom: 4px;
+
+    @include mobile {
+        width: calc(100% - 69px);
     }
+
+    li:nth-of-type(1) {
+        @include pad { order: 3; }
+    }
+
+    li:nth-of-type(2) {
+        @include pad { order: 1; }
+    }
+
+    li:nth-of-type(3) {
+        @include pad { order: 2; }
+    }
+
+    li:nth-of-type(4) {
+        @include pad { order: 4; }
+    }
+
     P {
         line-height: 24px;
         text-align: left;
     }
 }
-@include pad{
-    .service-item li {
-        width: calc(100%/2 - 30px);
-        margin-bottom: 40px;
-        .service-img {
-            height: 80px;
-            margin-bottom: 16px;
-            img {
-                width: 80px;
-            }
-        }
-        .service-subTitle {
-            font-size: $font-size20;
-            line-height: 28px;
-            margin-bottom: 8px;
-        }
+
+.service-img {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @include pad {
+        height: 80px;
+        margin-bottom: 16px;
+    }
+
+    @include mobile {
+        margin-bottom: 16px;
     }
 }
-@include mobile{
-    .service-item li {
-        width: calc(100% - 69px);
-        .service-img {
-            margin-bottom: 16px;
-        }
+.service-img img {
+    @include pad {
+        width: 80px;
+    }
+}
+.service-subTitle {
+    font-size: $h5-font-size;
+    line-height: 33x;
+    margin-bottom: 4px;
+    
+    @include pad {
+        font-size: $h6-font-size;
+        line-height: 28px;
+        margin-bottom: 8px;
     }
 }
 
+
 // classify
 .classify-card {
-    display: flex;
-    align-items: center;
     margin-bottom: 32px;
+    
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        @include pad {
+            flex-direction: row;
+        }
+    }
+    &:nth-child(3) {
+        margin-bottom: 0;
+    }
 }
-.classify-card:nth-child(even) {
-    flex-direction: row-reverse;
-}
-.classify-card:nth-child(3) {
-    margin-bottom: 0;
-}
+
+
 .classify-subTitle {
     font-family: $font-family-en;
-    font-size: $font-size48;
-    font-weight: $font-weight900;
+    font-size: $h3-font-size;
+    font-weight: $font-black;
     color: $color-primary;
     line-height: 63px;
     text-transform: uppercase;
     margin-left: 30px;
     margin-right: 30px;
+    
+    @include pad {
+        font-size: $h4-font-size;
+        line-height: 37px;
+    }
+    
     img {
         margin-right: 8px;
         height: 48px;
     }
 }
+
+.classify-subTitle img {
+    margin-right: 8px;
+    height: 48px;
+
+    @include pad {
+        height: 32px;
+    }
+}
+
 .classify-img-optical {
     background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-1.png) center center no-repeat;
     background-size: cover;
     width: 635px;
     height: 320px;
+
+    @include pad {
+        width: 390px;
+        height: 168px;
+    }
 }
 .classify-img-sunglasses {
     background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-2.png) center center no-repeat;
     background-size: cover;
     width: 635px;
     height: 320px;
+
+    @include pad {
+        width: 390px;
+        height: 168px;
+    }
 }
 .classify-img-functional {
     background: url(https://hexschool.github.io/webLayoutTraining1st/week3/product-3.png) center center no-repeat;
     background-size: cover;
     width: 635px;
     height: 320px;
-}
-@include pad{
-    .classify-card:nth-child(even){
-        flex-direction: row;
-    }
-    .classify-subTitle {
-        font-size: $font-size28;
-        line-height: 37px;
-        img {
-            height: 32px;
-        }
-    }
-    .classify-img-optical,
-    .classify-img-sunglasses,
-    .classify-img-functional {
+
+    @include pad {
         width: 390px;
         height: 168px;
     }
 }
+
 @include mobile{}
 
